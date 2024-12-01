@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import * as Y from "yjs";
@@ -54,7 +53,7 @@ function TranslateDocument({ doc }: { doc: Y.Doc }) {
   const [isPending, startTransition] = useTransition();
   const [languange, setLanguage] = useState<string>("");
   const [summary, setSummary] = useState<string>("");
-  const [question, setQuestion] = useState<string>("");
+  const [question] = useState<string>("");
   const [isOpen, setIsOpen] = useState(false);
 
   const handleAskQuestion = async (e: FormEvent) => {

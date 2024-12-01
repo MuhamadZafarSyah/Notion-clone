@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import { db } from "@/firebase";
@@ -8,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { useDocumentData } from "react-firebase-hooks/firestore";
 
 function SidebarOption({ href, id }: { href: string; id: string }) {
-  const [data, laoding, error] = useDocumentData(doc(db, "documents", id));
+  const [data] = useDocumentData(doc(db, "documents", id));
   const pathname = usePathname();
   const isActive = href.includes(pathname) && pathname !== "/";
 

@@ -23,7 +23,6 @@ function LiveCursorProvider({ children }: { children: React.ReactNode }) {
           <FollowPointer
             key={connectionId}
             info={info}
-            // title={`User: ${connectionId}`}
             x={presence.cursor!.x}
             y={presence.cursor!.y}
           />

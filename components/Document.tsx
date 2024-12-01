@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 import { FormEvent, useEffect, useState, useTransition } from "react";
 import { Input } from "./ui/input";
@@ -14,7 +13,7 @@ import ManageUser from "./ManageUser";
 import Avatars from "./Avatars";
 
 function Document({ id }: { id: string }) {
-  const [data, loading, error] = useDocumentData(doc(db, "documents", id));
+  const [data] = useDocumentData(doc(db, "documents", id));
   const [input, setInput] = useState<string>("");
   const [isUpdating, startTransition] = useTransition();
   const isOwner = useOwner();

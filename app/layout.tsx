@@ -1,25 +1,11 @@
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-// import { Geist } from "next/font/google";
 import "./globals.css";
 
 import Header from "@/components/Header";
 import { ClerkProvider } from "@clerk/nextjs";
 import Sidebar from "@/components/Sidebar";
 import { Toaster } from "@/components/ui/sonner";
-
-// const geistSans = localFont({
-//   src: "./fonts/GeistVF.woff",
-//   variable: "--font-geist-sans",
-//   weight: "100 900",
-// });
-// const geistMono = localFont({
-//   src: "./fonts/GeistMonoVF.woff",
-//   variable: "--font-geist-mono",
-//   weight: "100 900",
-// });
-
-// const geist = Geist({ subsets: ["latin"], weight: "400" });
 
 const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 

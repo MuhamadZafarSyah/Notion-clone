@@ -1,6 +1,6 @@
 import RoomProvider from "@/components/RoomProvider";
 
-async function layout({
+async function Layout({
   children,
   params,
 }: {
@@ -10,4 +10,4 @@ async function layout({
   const { id } = params instanceof Promise ? await params : params;
   return <RoomProvider roomId={id}>{children}</RoomProvider>;
 }
-export default layout;
+export default Layout;
