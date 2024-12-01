@@ -1,17 +1,27 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
+import { Poppins } from "next/font/google";
+// import { Geist } from "next/font/google";
 import "./globals.css";
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+import Header from "@/components/Header";
+import { ClerkProvider } from "@clerk/nextjs";
+import Sidebar from "@/components/Sidebar";
+import { Toaster } from "@/components/ui/sonner";
+
+// const geistSans = localFont({
+//   src: "./fonts/GeistVF.woff",
+//   variable: "--font-geist-sans",
+//   weight: "100 900",
+// });
+// const geistMono = localFont({
+//   src: "./fonts/GeistMonoVF.woff",
+//   variable: "--font-geist-mono",
+//   weight: "100 900",
+// });
+
+// const geist = Geist({ subsets: ["latin"], weight: "400" });
+
+const poppins = Poppins({ subsets: ["latin"], weight: "400" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,12 +34,21 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en">
+        <body className={poppins.className}>
+          <Header />
+
+          <div className="flex min-h-screen">
+            <Sidebar />
+
+            <div className="scrollbar-hide flex-1 overflow-y-auto bg-gray-100 p-4">
+              {children}
+            </div>
+          </div>
+          <Toaster richColors position="top-center" />
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }
