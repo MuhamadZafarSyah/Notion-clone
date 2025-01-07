@@ -6,12 +6,19 @@ import { getFirestore } from "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyA-5dr9F8OXvSs4hPlnC5u1WY9KxZ7eGHQ",
+  // apiKey: "AIzaSyA-5dr9F8OXvSs4hPlnC5u1WY9KxZ7eGHQ",
+  // authDomain: "notion-clone-b5084.firebaseapp.com",
+  // projectId: "notion-clone-b5084",
+  // storageBucket: "notion-clone-b5084.firebasestorage.app",
+  // messagingSenderId: "81135278767",
+  // appId: "1:81135278767:web:a00525ddb7baf34c00525a",
+
+  apiKey: "AIzaSyAYwoU8AAzadCzLsnSxdOohtlLP0S2RztI",
   authDomain: "notion-clone-b5084.firebaseapp.com",
   projectId: "notion-clone-b5084",
   storageBucket: "notion-clone-b5084.firebasestorage.app",
   messagingSenderId: "81135278767",
-  appId: "1:81135278767:web:a00525ddb7baf34c00525a",
+  appId: "1:81135278767:web:2ae8454b5e6c165d00525a",
 };
 
 // Initialize Firebase
